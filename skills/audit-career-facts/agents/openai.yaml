@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Career Facts"
+  short_description: "Audit career data for factual and structural risks"
+  default_prompt: "Use $audit-career-facts to audit my career workspace and report factual risks."

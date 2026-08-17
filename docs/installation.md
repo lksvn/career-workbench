@@ -14,6 +14,6 @@ Copy-Item -Recurse -LiteralPath '<repository>\skills\build-master-resume' -Desti
 cp -R '<repository>/skills/build-master-resume' '<skills-directory>/build-master-resume'
 ```
 
-Repeat for `import-career-kit`. Replace placeholders with local paths. Copying is preferred over linking so the installed skill is an explicit snapshot.
+Repeat for `import-career-kit` and `audit-career-facts`. Replace placeholders with local paths. Copying is preferred over linking so the installed skill is an explicit snapshot.
 
 After copying, start a new Codex task or reload skill discovery if the host requires it.

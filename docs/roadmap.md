@@ -6,10 +6,10 @@
 - Blank workspace templates and fictional fixtures
 - Progressive master-resume interview skill
 - Read-only Career Kit import skill
+- Career-fact audit skill
 
 ## Candidates for later versions
 
-- `audit-career-facts`
 - `tailor-resume`
 - `write-cover-letter`
 - Optional cross-platform validator or CLI
