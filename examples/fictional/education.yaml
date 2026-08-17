@@ -1,0 +1,11 @@
+schema_version: 1
+education:
+  - id: "example-college-systems"
+    kind: "degree"
+    institution: "Example Community College"
+    program: "Systems Analysis"
+    status: "Completed"
+    start_date: "2019"
+    end_date: "2021"
+    url: null
+    details: []

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "education.schema.json",
+  "type": "object", "additionalProperties": false, "required": ["schema_version", "education"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "education": { "type": "array", "items": {
+      "type": "object", "additionalProperties": false, "required": ["id", "kind", "institution", "program", "details"],
+      "properties": {
+        "id": { "$ref": "common.schema.json#/$defs/id" }, "kind": { "enum": ["degree", "course", "certification", "bootcamp", "other"] },
+        "institution": { "$ref": "common.schema.json#/$defs/text" }, "program": { "$ref": "common.schema.json#/$defs/text" }, "status": { "type": ["string", "null"] },
+        "start_date": { "$ref": "common.schema.json#/$defs/date" }, "end_date": { "$ref": "common.schema.json#/$defs/date" }, "url": { "type": ["string", "null"], "format": "uri" },
+        "details": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/text" } }
+      }
+    } }
+  }
+}

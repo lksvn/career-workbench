@@ -1,0 +1,14 @@
+schema_version: 1
+projects:
+  - id: "reading-log"
+    name: "Reading Log"
+    context: "personal-project"
+    description: "A small application for recording books and reading notes."
+    start_date: "2025"
+    end_date: null
+    url: "https://example.invalid/reading-log"
+    contributions:
+      - "Designed and implemented the application independently."
+    outcomes: []
+    technologies:
+      - "TypeScript"

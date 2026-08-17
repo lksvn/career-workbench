@@ -1,0 +1,27 @@
+schema_version: 1
+sources:
+  - id: "source-person"
+    type: "person"
+    reference: "Direct interview with the fictional subject"
+    notes: null
+claims:
+  - id: "claim-php-professional"
+    subject_ref: "php"
+    claim: "PHP was used in the Northwind Studio role."
+    status: "confirmed"
+    source_refs:
+      - "source-person"
+    notes: null
+  - id: "claim-typescript-project"
+    subject_ref: "typescript"
+    claim: "TypeScript was used in the Reading Log personal project."
+    status: "confirmed"
+    source_refs:
+      - "source-person"
+    notes: null
+pending_questions:
+  - id: "question-northwind-results"
+    question: "Were any Northwind Studio outcomes measured and documented?"
+    related_refs:
+      - "northwind-web-developer"
+conflicts: []

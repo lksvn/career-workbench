@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Master Resume"
+  short_description: "Build a fact-checked comprehensive master resume"
+  default_prompt: "Use $build-master-resume to create or continue my master resume."

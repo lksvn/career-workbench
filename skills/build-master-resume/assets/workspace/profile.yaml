@@ -1,0 +1,3 @@
+schema_version: 1
+person: {name: "", preferred_name: null, pronouns: null, location: null, email: null, phone: null, links: []}
+positioning: {headline: null, summary: null, target_roles: [], work_preferences: [], languages: []}

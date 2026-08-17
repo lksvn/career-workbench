@@ -1,0 +1,4 @@
+interface:
+  display_name: "Import Career Kit"
+  short_description: "Import career facts into a portable workspace"
+  default_prompt: "Use $import-career-kit to import an existing Career Kit safely."

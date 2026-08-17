@@ -1,0 +1,5 @@
+# Private workspaces must live outside this repository.
+.DS_Store
+Thumbs.db
+*.local.yaml
+*.private.yaml

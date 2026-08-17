@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "experience.schema.json",
+  "type": "object", "additionalProperties": false, "required": ["schema_version", "experiences"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "experiences": { "type": "array", "items": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "organization", "role", "start_date", "responsibilities", "achievements", "technologies"],
+      "properties": {
+        "id": { "$ref": "common.schema.json#/$defs/id" }, "organization": { "$ref": "common.schema.json#/$defs/text" }, "role": { "$ref": "common.schema.json#/$defs/text" },
+        "employment_type": { "type": ["string", "null"] }, "location": { "type": ["string", "null"] },
+        "start_date": { "$ref": "common.schema.json#/$defs/date" }, "end_date": { "$ref": "common.schema.json#/$defs/date" }, "current": { "type": "boolean" },
+        "summary": { "type": ["string", "null"] }, "responsibilities": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/text" } },
+        "achievements": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/text" } }, "technologies": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/text" } }
+      }
+    } }
+  }
+}

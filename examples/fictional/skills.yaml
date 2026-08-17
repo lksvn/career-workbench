@@ -1,0 +1,22 @@
+schema_version: 1
+skills:
+  - id: "php"
+    name: "PHP"
+    category: "Programming language"
+    contexts:
+      - "professional"
+    confidence: "proficient"
+    last_used: "2024"
+    notes: null
+    evidence_refs:
+      - "claim-php-professional"
+  - id: "typescript"
+    name: "TypeScript"
+    category: "Programming language"
+    contexts:
+      - "personal-project"
+    confidence: "working"
+    last_used: "2025"
+    notes: null
+    evidence_refs:
+      - "claim-typescript-project"

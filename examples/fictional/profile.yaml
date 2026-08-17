@@ -1,0 +1,23 @@
+schema_version: 1
+person:
+  name: "Alex Rivera"
+  preferred_name: "Alex"
+  pronouns: null
+  location: "Porto Alegre, Brazil"
+  email: "alex.rivera@example.invalid"
+  phone: null
+  links:
+    - label: "Portfolio"
+      url: "https://example.invalid/alex"
+positioning:
+  headline: "Web developer"
+  summary: "Developer focused on maintainable web applications and clear collaboration."
+  target_roles:
+    - "Web Developer"
+  work_preferences:
+    - "Remote"
+  languages:
+    - language: "Portuguese"
+      level: "Native"
+    - language: "English"
+      level: "Professional working proficiency"

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "projects.schema.json",
+  "type": "object", "additionalProperties": false, "required": ["schema_version", "projects"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "projects": { "type": "array", "items": {
+      "type": "object", "additionalProperties": false, "required": ["id", "name", "context", "description", "contributions", "outcomes", "technologies"],
+      "properties": {
+        "id": { "$ref": "common.schema.json#/$defs/id" }, "name": { "$ref": "common.schema.json#/$defs/text" }, "context": { "$ref": "common.schema.json#/$defs/context" }, "description": { "$ref": "common.schema.json#/$defs/text" },
+        "start_date": { "$ref": "common.schema.json#/$defs/date" }, "end_date": { "$ref": "common.schema.json#/$defs/date" }, "url": { "type": ["string", "null"], "format": "uri" },
+        "contributions": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/text" } }, "outcomes": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/text" } }, "technologies": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/text" } }
+      }
+    } }
+  }
+}

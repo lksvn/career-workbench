@@ -1,0 +1,18 @@
+schema_version: 1
+experiences:
+  - id: "northwind-web-developer"
+    organization: "Northwind Studio"
+    role: "Web Developer"
+    employment_type: "Full-time"
+    location: "Remote"
+    start_date: "2022-03"
+    end_date: "2024-08"
+    current: false
+    summary: "Maintained internal web applications."
+    responsibilities:
+      - "Implemented confirmed product changes with the development team."
+      - "Investigated and corrected application defects."
+    achievements: []
+    technologies:
+      - "PHP"
+      - "JavaScript"

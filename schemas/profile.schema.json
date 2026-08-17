@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "profile.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "person", "positioning"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "person": {
+      "type": "object", "additionalProperties": false, "required": ["name"],
+      "properties": {
+        "name": { "$ref": "common.schema.json#/$defs/text" },
+        "preferred_name": { "type": ["string", "null"] },
+        "pronouns": { "type": ["string", "null"] },
+        "location": { "type": ["string", "null"] },
+        "email": { "type": ["string", "null"], "format": "email" },
+        "phone": { "type": ["string", "null"] },
+        "links": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["label", "url"], "properties": { "label": { "$ref": "common.schema.json#/$defs/text" }, "url": { "type": "string", "format": "uri" } } } }
+      }
+    },
+    "positioning": {
+      "type": "object", "additionalProperties": false, "required": ["headline", "summary", "target_roles", "work_preferences", "languages"],
+      "properties": {
+        "headline": { "type": ["string", "null"] }, "summary": { "type": ["string", "null"] },
+        "target_roles": { "type": "array", "items": { "type": "string" } },
+        "work_preferences": { "type": "array", "items": { "type": "string" } },
+        "languages": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["language", "level"], "properties": { "language": { "$ref": "common.schema.json#/$defs/text" }, "level": { "$ref": "common.schema.json#/$defs/text" } } } }
+      }
+    }
+  }
+}
