@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tailor Resume"
+  short_description: "Tailor a factual resume to a specific role"
+  default_prompt: "Use $tailor-resume to create a fact-checked resume for this vacancy."

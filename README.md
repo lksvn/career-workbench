@@ -35,6 +35,7 @@ Create a private directory outside this repository and copy the files from `temp
 - `build-master-resume`: interview, resume, and translation workflow.
 - `import-career-kit`: read-only import from a manifest-driven Markdown Career Kit.
 - `audit-career-facts`: structural, evidentiary, and narrative consistency audit.
+- `tailor-resume`: vacancy analysis and factual targeted-resume generation.
 
 Install a skill by copying its complete directory from `skills/` into your Codex skills directory. Common defaults are `%USERPROFILE%\.codex\skills` on Windows and `~/.codex/skills` on Linux. If `CODEX_HOME` is configured, use its `skills` subdirectory instead.
 

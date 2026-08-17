@@ -7,10 +7,10 @@
 - Progressive master-resume interview skill
 - Read-only Career Kit import skill
 - Career-fact audit skill
+- Vacancy-specific resume tailoring skill
 
 ## Candidates for later versions
 
-- `tailor-resume`
 - `write-cover-letter`
 - Optional cross-platform validator or CLI
 - Document exporters and workspace migrations
