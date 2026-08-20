@@ -60,10 +60,41 @@
         }
       }
     },
+    "translations": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["profile_location", "experience", "projects", "education", "languages"],
+      "properties": {
+        "profile_location": { "type": ["string", "null"] },
+        "experience": { "type": "array", "items": { "$ref": "#/$defs/experienceTranslation" } },
+        "projects": { "type": "array", "items": { "$ref": "#/$defs/projectTranslation" } },
+        "education": { "type": "array", "items": { "$ref": "#/$defs/educationTranslation" } },
+        "languages": { "type": "array", "items": { "$ref": "#/$defs/languageTranslation" } }
+      }
+    },
     "page_density_risk": { "enum": ["low", "medium", "high"] }
   },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "vacancy": { "properties": { "language": { "const": "pt-BR" } } }
+        }
+      },
+      "then": { "required": ["translations"] }
+    }
+  ],
   "$defs": {
     "indexList": { "type": "array", "uniqueItems": true, "items": { "type": "integer", "minimum": 0 } },
+    "claimTranslation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["index", "text"],
+      "properties": {
+        "index": { "type": "integer", "minimum": 0 },
+        "text": { "$ref": "common.schema.json#/$defs/text" }
+      }
+    },
     "experienceSelection": {
       "type": "object",
       "additionalProperties": false,
@@ -83,6 +114,50 @@
         "contribution_indexes": { "$ref": "#/$defs/indexList" },
         "outcome_indexes": { "$ref": "#/$defs/indexList" },
         "include_technologies": { "type": "boolean" }
+      }
+    },
+    "experienceTranslation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "role", "location", "summary", "responsibilities", "achievements"],
+      "properties": {
+        "id": { "$ref": "common.schema.json#/$defs/id" },
+        "role": { "$ref": "common.schema.json#/$defs/text" },
+        "location": { "type": ["string", "null"] },
+        "summary": { "type": ["string", "null"] },
+        "responsibilities": { "type": "array", "items": { "$ref": "#/$defs/claimTranslation" } },
+        "achievements": { "type": "array", "items": { "$ref": "#/$defs/claimTranslation" } }
+      }
+    },
+    "projectTranslation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "description", "contributions", "outcomes"],
+      "properties": {
+        "id": { "$ref": "common.schema.json#/$defs/id" },
+        "description": { "$ref": "common.schema.json#/$defs/text" },
+        "contributions": { "type": "array", "items": { "$ref": "#/$defs/claimTranslation" } },
+        "outcomes": { "type": "array", "items": { "$ref": "#/$defs/claimTranslation" } }
+      }
+    },
+    "educationTranslation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "program", "status"],
+      "properties": {
+        "id": { "$ref": "common.schema.json#/$defs/id" },
+        "program": { "$ref": "common.schema.json#/$defs/text" },
+        "status": { "$ref": "common.schema.json#/$defs/text" }
+      }
+    },
+    "languageTranslation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_language", "language", "level"],
+      "properties": {
+        "source_language": { "$ref": "common.schema.json#/$defs/text" },
+        "language": { "$ref": "common.schema.json#/$defs/text" },
+        "level": { "$ref": "common.schema.json#/$defs/text" }
       }
     }
   }

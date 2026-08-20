@@ -43,3 +43,7 @@ A targeted resume may have an adjacent `.selection.yaml` file conforming to
 canonical career file. It records the vacancy requirement map and exact
 canonical records selected for rendering, plus gaps and omissions that must
 remain outside the publishable resume.
+
+When the selected language differs from the canonical narrative language, the
+plan carries fact-equivalent translations bound to the same record IDs and
+claim indexes. These translations are derivative wording, not new facts.

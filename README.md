@@ -50,6 +50,8 @@ See `docs/protocol.md` for the data model and `docs/installation.md` for portabl
 Vacancy-specific renderer handoffs use the optional
 `schemas/resume-selection.schema.json` contract. They remain derivative files
 and do not modify the six canonical workspace documents.
+Portuguese plans carry indexed, fact-equivalent narrative translations so a
+renderer does not need to infer or silently strengthen canonical claims.
 
 ## License
 

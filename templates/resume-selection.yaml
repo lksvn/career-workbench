@@ -15,4 +15,10 @@ selection:
   education_ids: []
   include_languages: true
 omissions: []
+translations:
+  profile_location: null
+  experience: []
+  projects: []
+  education: []
+  languages: []
 page_density_risk: "low"

@@ -1,0 +1,74 @@
+schema_version: 1
+vacancy:
+  company: "Contoso Comércio"
+  role: "Desenvolvedor Web PHP"
+  language: "pt-BR"
+  source: "Fixture fictícia de vaga"
+requirements:
+  - id: "desenvolvimento-web-php"
+    text: "Desenvolver e manter aplicações web em PHP"
+    kind: "mandatory"
+    evidence_state: "professional"
+    supporting_record_ids: ["northwind-web-developer", "php"]
+    notes: null
+  - id: "typescript"
+    text: "Experiência com TypeScript"
+    kind: "preferred"
+    evidence_state: "project"
+    supporting_record_ids: ["typescript", "reading-log"]
+    notes: "Manter visivelmente classificada como experiência em projeto pessoal."
+  - id: "kubernetes"
+    text: "Experiência com Kubernetes"
+    kind: "preferred"
+    evidence_state: "unsupported"
+    supporting_record_ids: []
+    notes: "Excluir do currículo e registrar como lacuna."
+selection:
+  headline: "Desenvolvedor Web | PHP"
+  summary: "Desenvolvedor Web com experiência profissional confirmada na manutenção de aplicações web em PHP e integrações com bancos de dados relacionais."
+  professional_skill_ids: ["php"]
+  experience:
+    - id: "northwind-web-developer"
+      responsibility_indexes: [0]
+      achievement_indexes: []
+  additional_experience_ids: []
+  projects:
+    - id: "reading-log"
+      contribution_indexes: [0]
+      outcome_indexes: []
+      include_technologies: true
+  education_ids: ["example-college-systems"]
+  include_languages: true
+omissions:
+  - record_id: "typescript"
+    reason: "Mantido apenas no projeto pessoal explicitamente identificado, e não nas competências profissionais."
+translations:
+  profile_location: "Porto Alegre, Brasil"
+  experience:
+    - id: "northwind-web-developer"
+      role: "Desenvolvedor Web"
+      location: "Remoto"
+      summary: "Realizou a manutenção de aplicações web internas."
+      responsibilities:
+        - index: 0
+          text: "Implementou alterações confirmadas no produto em conjunto com a equipe de desenvolvimento."
+      achievements: []
+  projects:
+    - id: "reading-log"
+      description: "Uma pequena aplicação para registrar livros e anotações de leitura."
+      contributions:
+        - index: 0
+          text: "Projetou e implementou a aplicação de forma independente."
+      outcomes: []
+  education:
+    - id: "example-college-systems"
+      program: "Análise de Sistemas"
+      status: "Concluído"
+  languages:
+    - source_language: "Portuguese"
+      language: "Português"
+      level: "Nativo"
+    - source_language: "English"
+      language: "Inglês"
+      level: "Proficiência profissional"
+page_density_risk: "low"
