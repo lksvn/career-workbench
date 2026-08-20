@@ -15,6 +15,9 @@ Create a focused derivative resume from confirmed workspace facts. Never edit ca
 4. Read all six workspace YAML files and the matching-language master resume.
 5. Read `references/vacancy-analysis.md` before extracting requirements.
 6. Read `references/selection-policy.md` before selecting or wording evidence.
+7. When producing a renderer-neutral handoff, read
+   `references/selection-plan.md` and validate the result against
+   `references/resume-selection.schema.json`.
 
 If the vacancy text is incomplete or inaccessible, identify the missing source instead of guessing requirements.
 
@@ -63,6 +66,11 @@ Return the draft in the conversation unless the user asks for a file or the task
 ```
 
 Use lowercase kebab-case for the filename and `pt-BR` or `en` for language. Do not overwrite an existing targeted resume without inspecting it first.
+
+When another component will render the resume, also create the adjacent
+`.selection.yaml` handoff. The plan records the vacancy requirement map,
+canonical IDs and exact list indexes selected, material omissions, unsupported
+requirements, and page-density risk without duplicating canonical claims.
 
 Alongside the resume, report:
 

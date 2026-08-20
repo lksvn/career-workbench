@@ -47,6 +47,10 @@ Do not place a real workspace inside this repository. Before publishing changes,
 
 See `docs/protocol.md` for the data model and `docs/installation.md` for portable installation guidance.
 
+Vacancy-specific renderer handoffs use the optional
+`schemas/resume-selection.schema.json` contract. They remain derivative files
+and do not modify the six canonical workspace documents.
+
 ## License
 
 Career Workbench is available under the [MIT License](LICENSE).

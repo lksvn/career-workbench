@@ -1,0 +1,45 @@
+schema_version: 1
+vacancy:
+  company: "Contoso Commerce"
+  role: "PHP Web Developer"
+  language: "en"
+  source: "Fictional vacancy fixture"
+requirements:
+  - id: "php-web-development"
+    text: "Build and maintain PHP web applications"
+    kind: "mandatory"
+    evidence_state: "professional"
+    supporting_record_ids: ["northwind-web-developer", "php"]
+    notes: null
+  - id: "typescript"
+    text: "TypeScript experience"
+    kind: "preferred"
+    evidence_state: "project"
+    supporting_record_ids: ["typescript", "reading-log"]
+    notes: "Keep visibly classified as personal-project experience."
+  - id: "kubernetes"
+    text: "Kubernetes experience"
+    kind: "preferred"
+    evidence_state: "unsupported"
+    supporting_record_ids: []
+    notes: "Exclude from the resume and report as a gap."
+selection:
+  headline: "Web Developer | PHP"
+  summary: "Web Developer with confirmed professional experience maintaining PHP web applications and relational database integrations."
+  professional_skill_ids: ["php"]
+  experience:
+    - id: "northwind-web-developer"
+      responsibility_indexes: [0]
+      achievement_indexes: []
+  additional_experience_ids: []
+  projects:
+    - id: "reading-log"
+      contribution_indexes: [0]
+      outcome_indexes: []
+      include_technologies: true
+  education_ids: ["example-college-systems"]
+  include_languages: true
+omissions:
+  - record_id: "typescript"
+    reason: "Retained only inside the visibly labeled personal project instead of professional skills."
+page_density_risk: "low"

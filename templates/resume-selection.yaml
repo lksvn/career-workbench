@@ -1,0 +1,18 @@
+schema_version: 1
+vacancy:
+  company: ""
+  role: ""
+  language: "en"
+  source: null
+requirements: []
+selection:
+  headline: ""
+  summary: ""
+  professional_skill_ids: []
+  experience: []
+  additional_experience_ids: []
+  projects: []
+  education_ids: []
+  include_languages: true
+omissions: []
+page_density_risk: "low"

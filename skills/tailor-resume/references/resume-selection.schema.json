@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "resume-selection.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "vacancy", "requirements", "selection", "omissions", "page_density_risk"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "vacancy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["company", "role", "language", "source"],
+      "properties": {
+        "company": { "$ref": "common.schema.json#/$defs/text" },
+        "role": { "$ref": "common.schema.json#/$defs/text" },
+        "language": { "enum": ["pt-BR", "en"] },
+        "source": { "type": ["string", "null"] }
+      }
+    },
+    "requirements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "text", "kind", "evidence_state", "supporting_record_ids", "notes"],
+        "properties": {
+          "id": { "$ref": "common.schema.json#/$defs/id" },
+          "text": { "$ref": "common.schema.json#/$defs/text" },
+          "kind": { "enum": ["mandatory", "preferred", "responsibility", "constraint", "context"] },
+          "evidence_state": { "enum": ["professional", "project", "study", "historical", "unsupported"] },
+          "supporting_record_ids": { "type": "array", "uniqueItems": true, "items": { "$ref": "common.schema.json#/$defs/id" } },
+          "notes": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "selection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["headline", "summary", "professional_skill_ids", "experience", "additional_experience_ids", "projects", "education_ids", "include_languages"],
+      "properties": {
+        "headline": { "$ref": "common.schema.json#/$defs/text" },
+        "summary": { "$ref": "common.schema.json#/$defs/text" },
+        "professional_skill_ids": { "type": "array", "uniqueItems": true, "items": { "$ref": "common.schema.json#/$defs/id" } },
+        "experience": { "type": "array", "items": { "$ref": "#/$defs/experienceSelection" } },
+        "additional_experience_ids": { "type": "array", "uniqueItems": true, "items": { "$ref": "common.schema.json#/$defs/id" } },
+        "projects": { "type": "array", "items": { "$ref": "#/$defs/projectSelection" } },
+        "education_ids": { "type": "array", "uniqueItems": true, "items": { "$ref": "common.schema.json#/$defs/id" } },
+        "include_languages": { "type": "boolean" }
+      }
+    },
+    "omissions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["record_id", "reason"],
+        "properties": {
+          "record_id": { "$ref": "common.schema.json#/$defs/id" },
+          "reason": { "$ref": "common.schema.json#/$defs/text" }
+        }
+      }
+    },
+    "page_density_risk": { "enum": ["low", "medium", "high"] }
+  },
+  "$defs": {
+    "indexList": { "type": "array", "uniqueItems": true, "items": { "type": "integer", "minimum": 0 } },
+    "experienceSelection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "responsibility_indexes", "achievement_indexes"],
+      "properties": {
+        "id": { "$ref": "common.schema.json#/$defs/id" },
+        "responsibility_indexes": { "$ref": "#/$defs/indexList" },
+        "achievement_indexes": { "$ref": "#/$defs/indexList" }
+      }
+    },
+    "projectSelection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "contribution_indexes", "outcome_indexes", "include_technologies"],
+      "properties": {
+        "id": { "$ref": "common.schema.json#/$defs/id" },
+        "contribution_indexes": { "$ref": "#/$defs/indexList" },
+        "outcome_indexes": { "$ref": "#/$defs/indexList" },
+        "include_technologies": { "type": "boolean" }
+      }
+    }
+  }
+}
+

@@ -35,3 +35,11 @@ Technology and project claims must identify their context. Allowed contexts are 
 `MASTER_RESUME.pt-BR.md` is the comprehensive primary narrative. It may be longer than an application resume. `MASTER_RESUME.en.md` is an optional factual translation, not an independently enhanced version.
 
 Narrative documents must not expose evidence IDs, confirmation markers, source paths, or internal questions.
+
+## Vacancy-specific derivatives
+
+A targeted resume may have an adjacent `.selection.yaml` file conforming to
+`schemas/resume-selection.schema.json`. This derivative is not a seventh
+canonical career file. It records the vacancy requirement map and exact
+canonical records selected for rendering, plus gaps and omissions that must
+remain outside the publishable resume.
