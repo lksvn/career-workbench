@@ -1,6 +1,6 @@
 ---
 name: import-career-kit
-description: Import a personal manifest-driven Markdown Career Kit into a separate Career Workbench workspace without modifying the source. Use when Codex needs to inspect PROFILE.md and derived resume artifacts, convert supported facts into portable YAML, classify professional versus study or project experience, report contradictions, or create a reversible migration comparison.
+description: Import a personal manifest-driven Markdown Career Kit into a separate Career Workbench workspace without modifying the source. Use when an agent needs to inspect PROFILE.md and derived resume artifacts, convert supported facts into portable YAML, classify professional versus study or project experience, report contradictions, or create a reversible migration comparison.
 ---
 
 # Import Career Kit

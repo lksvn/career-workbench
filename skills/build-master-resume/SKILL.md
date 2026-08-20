@@ -1,6 +1,6 @@
 ---
 name: build-master-resume
-description: Build, resume, audit, or translate a comprehensive fact-checked master resume from an empty workspace or existing career documents. Use when Codex needs to interview a person progressively, structure career facts in Career Workbench YAML files, distinguish professional experience from projects or study, maintain evidence and pending questions, generate MASTER_RESUME.pt-BR.md, or produce a fact-equivalent English version on request.
+description: Build, resume, audit, or translate a comprehensive fact-checked master resume from an empty workspace or existing career documents. Use when an agent needs to interview a person progressively, structure career facts in Career Workbench YAML files, distinguish professional experience from projects or study, maintain evidence and pending questions, generate MASTER_RESUME.pt-BR.md, or produce a fact-equivalent English version on request.
 ---
 
 # Build Master Resume

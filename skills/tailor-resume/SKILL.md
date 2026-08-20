@@ -1,6 +1,6 @@
 ---
 name: tailor-resume
-description: Create a vacancy-specific, ATS-friendly resume from a Career Workbench workspace without changing canonical facts. Use when Codex needs to analyze a job description, select and prioritize supported experience, adapt a professional summary and skills section, preserve study-versus-professional context, create a Portuguese or English targeted resume, or report material fit gaps and excluded keywords.
+description: Create a vacancy-specific, ATS-friendly resume from a Career Workbench workspace without changing canonical facts. Use when an agent needs to analyze a job description, select and prioritize supported experience, adapt a professional summary and skills section, preserve study-versus-professional context, create a Portuguese or English targeted resume, or report material fit gaps and excluded keywords.
 ---
 
 # Tailor Resume
@@ -10,7 +10,7 @@ Create a focused derivative resume from confirmed workspace facts. Never edit ca
 ## Gather inputs
 
 1. Resolve the selected Career Workbench workspace.
-2. Obtain the complete vacancy text or a source the user has authorized Codex to inspect.
+2. Obtain the complete vacancy text or a source the user has authorized the agent to inspect.
 3. Determine output language from the vacancy unless the user specifies it.
 4. Read all six workspace YAML files and the matching-language master resume.
 5. Read `references/vacancy-analysis.md` before extracting requirements.

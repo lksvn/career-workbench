@@ -37,10 +37,16 @@ Create a private directory outside this repository and copy the files from `temp
 - `audit-career-facts`: structural, evidentiary, and narrative consistency audit.
 - `tailor-resume`: vacancy analysis and factual targeted-resume generation.
 
-Install a skill by copying its complete directory from `skills/` into your Codex skills directory. Common defaults are `%USERPROFILE%\.codex\skills` on Windows and `~/.codex/skills` on Linux. If `CODEX_HOME` is configured, use its `skills` subdirectory instead.
+Each skill is self-contained in a directory with a `SKILL.md`. Install it in the skills directory recognized by your agent or load the instructions using the mechanism supported by that host.
+
+Files under `agents/` are optional host adapters. For example, `agents/openai.yaml` provides OpenAI-specific discovery metadata but is not required by the Career Workbench protocol or by the skill instructions themselves.
 
 ## Privacy
 
 Do not place a real workspace inside this repository. Before publishing changes, inspect tracked files and Git history for names, contact details, employers, paths, and other identifying data.
 
 See `docs/protocol.md` for the data model and `docs/installation.md` for portable installation guidance.
+
+## License
+
+Career Workbench is available under the [MIT License](LICENSE).

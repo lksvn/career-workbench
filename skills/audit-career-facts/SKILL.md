@@ -1,6 +1,6 @@
 ---
 name: audit-career-facts
-description: Audit Career Workbench YAML data, evidence, master resumes, translations, and supporting repositories for structural errors and unsupported career claims. Use when Codex needs to validate workspace files, find duplicate or broken references, detect professional-versus-study misclassification, compare PT-BR and English documents, identify unverified claims, or produce a prioritized factual-risk report without silently rewriting canonical data.
+description: Audit Career Workbench YAML data, evidence, master resumes, translations, and supporting repositories for structural errors and unsupported career claims. Use when an agent needs to validate workspace files, find duplicate or broken references, detect professional-versus-study misclassification, compare PT-BR and English documents, identify unverified claims, or produce a prioritized factual-risk report without silently rewriting canonical data.
 ---
 
 # Audit Career Facts
